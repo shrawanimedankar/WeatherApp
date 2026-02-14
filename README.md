@@ -9,7 +9,7 @@ https://weatherapp-vw8v.onrender.com
 
 
 ---
-<br>
+
 
 ## 📌 Features
 - Fetches **current weather data** for any city worldwide using a weather API.  
