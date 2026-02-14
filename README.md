@@ -4,7 +4,7 @@ A **responsive Weather Application** built with **React.js** that fetches real-t
 
 ---
 
-## 🌐 Live Demo: &nbsp; *[Live Link](https://weatherapp-vw8v.onrender.com)*
+## 🌐 Live Demo: &nbsp; *https://weatherapp-vw8v.onrender.com*
 
 ## 📌 Features
 - Fetches **current weather data** for any city worldwide using a weather API.  
