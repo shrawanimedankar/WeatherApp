@@ -1,10 +1,15 @@
-🌤️ Weather App | React 
+ # 🌤️Weather App | React 
 
 A **responsive Weather Application** built with **React.js** that fetches real-time weather data from an API and dynamically changes the background according to weather conditions.
 
----
 
-## 🌐 Live Demo: &nbsp; *https://weatherapp-vw8v.onrender.com*
+
+## 🌐 Live Demo: 
+https://weatherapp-vw8v.onrender.com
+
+
+---
+<br>
 
 ## 📌 Features
 - Fetches **current weather data** for any city worldwide using a weather API.  
