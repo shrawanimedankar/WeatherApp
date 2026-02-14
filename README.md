@@ -48,7 +48,7 @@ https://weatherapp-vw8v.onrender.com
 - VITE_WEATHER_API_KEY=YOUR_API_KEY_HERE
 - VITE_WEATHER_API_URL=https://api.openweathermap.org/data/2.5/weather
 
-*NOTE* Replace YOUR_API_KEY_HERE with your actual API key from OpenWeatherMap.
+*NOTE*: Replace YOUR_API_KEY_HERE with your actual API key from OpenWeatherMap.
 
 ## Start the development server
 - npm run dev
