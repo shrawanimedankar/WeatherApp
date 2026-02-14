@@ -1,0 +1,111 @@
+.InfoBox {
+  text-align: center;
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.weatherCard {
+  max-width: 1000px;
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.628) !important;
+  box-shadow: 1px 1px 25px 7px rgb(0, 0, 0) !important;
+}
+
+.cardContent {
+  text-align: center;
+  color: black;
+}
+
+.cityName.MuiTypography-root {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.weatherText.MuiTypography-root {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(36, 36, 36);
+}
+
+.detailsText.MuiTypography-root {
+  margin-top: 8px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-left: 2rem;
+}
+
+.iconTemp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.iconTemp h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.iconTemp .weatherIcon {
+  font-size: 3.5rem;
+}
+
+.sunTime {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .weatherCard {
+    max-width: 350px;
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.628) !important;
+    box-shadow: 1px 1px 25px 7px rgb(0, 0, 0) !important;
+  }
+
+  .cardContent {
+    text-align: center;
+    color: black;
+  }
+
+  .cityName.MuiTypography-root {
+    font-size: 1.4rem;
+  }
+
+  .weatherText.MuiTypography-root {
+    font-size: 1rem;
+  }
+
+  .detailsText.MuiTypography-root {
+    margin-top: 3px;
+    font-size: 0.9rem;
+    margin-left: 0.1rem;
+  }
+
+  .iconTemp {
+    gap: 5px;
+  }
+
+  .iconTemp h1 {
+    font-size: 2.5rem;
+  }
+
+  .iconTemp .weatherIcon {
+    font-size: 3rem;
+  }
+
+  .sunTime {
+    margin-top: 7px;
+    gap: 1px;
+    font-size: 0.7rem;
+  }
+}
