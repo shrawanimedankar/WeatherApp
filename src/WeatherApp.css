@@ -13,7 +13,7 @@
 
 .headerFull {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.588); 
+  background-color: rgba(0, 0, 0, 0.588);
   text-align: center;
   padding: 0.2rem 0;
   margin-bottom: 1rem;
@@ -33,7 +33,5 @@
   }
   .WeatherApp {
     background-position: top;
-     /* background-size: contain;
-     background-repeat: repeat; */
   }
 }

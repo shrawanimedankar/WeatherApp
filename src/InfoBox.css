@@ -10,7 +10,7 @@
 .weatherCard {
   max-width: 1000px;
   margin-top: 40px;
-  background: rgba(255, 255, 255, 0.628) !important;
+  background: rgba(255, 255, 255, 0.441) !important;
   box-shadow: 1px 1px 25px 7px rgb(0, 0, 0) !important;
 }
 
