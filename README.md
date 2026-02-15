@@ -1,4 +1,4 @@
-# 🌤️Weather App | React 
+# 🌤️Weather App | React, Material UI (MUI) 
 
 A **responsive Weather Application** built with **React.js** and **Material UI (MUI)** that fetches real-time weather data from an API and dynamically changes the background according to weather conditions.
 

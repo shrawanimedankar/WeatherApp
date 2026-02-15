@@ -33,10 +33,10 @@ export default function InfoBox({ info }) {
 
   const WeatherIcon = iconMap[info.weatherMain] || CloudIcon;
 
-return (
+  return (
     <div className="InfoBox">
       <div className="cardContainer">
-        <Card className="weatherCard" >
+        <Card className="weatherCard">
           <CardContent className="cardContent">
             <Typography component="div" className="cityName">
               {info.city}, {info.country}
@@ -47,16 +47,16 @@ return (
               <h1>{Math.round(info.temp)}°C</h1>
             </div>
 
-            <Typography className="weatherText">
-              {info.weather}
+            <Typography className="weatherText">{info.weather}</Typography>
+
+            <Typography className="detailsText">
+              Min: {Math.round(info.tempMin)}°C &nbsp; | &nbsp; Max:{" "}
+              {Math.round(info.tempMax)}°C
             </Typography>
 
             <Typography className="detailsText">
-              Min: {Math.round(info.tempMin)}°C &nbsp; | &nbsp; Max: {Math.round(info.tempMax)}°C
-            </Typography>
-
-            <Typography className="detailsText">
-              Feels like: {Math.round(info.feels_like)}°C &nbsp; | &nbsp; Humidity: {info.humidity}% &nbsp; | &nbsp; Wind: {info.wind} m/s
+              Feels like: {Math.round(info.feels_like)}°C &nbsp; | &nbsp;
+              Humidity: {info.humidity}% &nbsp; | &nbsp; Wind: {info.wind} m/s
             </Typography>
 
             <div className="sunTime">

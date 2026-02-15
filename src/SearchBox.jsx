@@ -41,7 +41,7 @@ export default function SearchBox({ updateInfo }) {
 
   let handleChange = (event) => {
     setCity(event.target.value);
-    setError(false);   
+    setError(false);
   };
 
   let handleSubmit = async (event) => {
@@ -114,7 +114,14 @@ export default function SearchBox({ updateInfo }) {
           Search
         </Button>
         {error && (
-          <p style={{ color: "red", fontWeight: 700, backgroundColor:"white", marginTop:"0.4rem" }}>
+          <p
+            style={{
+              color: "red",
+              fontWeight: 700,
+              backgroundColor: "white",
+              marginTop: "0.4rem",
+            }}
+          >
             We couldn't find this place
           </p>
         )}

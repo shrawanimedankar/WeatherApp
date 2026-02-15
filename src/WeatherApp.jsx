@@ -55,7 +55,6 @@ export default function WeatherApp() {
 
     // Humidity overrides
     if (info.humidity > 85) bg = "/rainy.jpg";
-    
     else if (info.humidity > 70 && info.humidity <= 85) bg = "/drizzle.jpg";
 
     // Extreme wind overrides everything
@@ -78,7 +77,8 @@ export default function WeatherApp() {
   return (
     <div
       className="WeatherApp"
-     style={{ backgroundImage: `url(${bgImage})`,
+      style={{
+        backgroundImage: `url(${bgImage})`,
         transition: "background 0.5s ease",
       }}
     >
