@@ -12,12 +12,9 @@ export default function WeatherApp() {
   const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
   const API_URL = import.meta.env.VITE_WEATHER_API_URL;
 
-  // Function to fetch weather info
   const fetchWeather = async (city = DEFAULT_CITY) => {
     try {
-      const response = await fetch(
-        `${API_URL}?q=${city}&appid=${API_KEY}&units=metric`,
-      );
+      const response = await fetch(`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`,);
       const data = await response.json();
 
       const info = {

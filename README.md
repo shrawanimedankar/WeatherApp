@@ -22,9 +22,7 @@ https://weatherapp-vw8v.onrender.com
 ---
 
 ## Technologies Used
-- **Frontend:** React.js, Material UI (MUI)  
-- **State Management:** `useState`, `useEffect`  
-- **API:** OpenWeatherMap API (or any weather API)  
+- **Frontend:** React.js, Material UI (MUI)    
 - **CSS:** Modular component CSS, responsive media queries  
 - **Icons:** Material UI Icons  
 
@@ -48,6 +46,3 @@ https://weatherapp-vw8v.onrender.com
 
 ## Start the development server
 - npm run dev
-
-Open your browser at http://localhost:5173 (or the URL given in the terminal).
-

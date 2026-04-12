@@ -4,6 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import Button from "@mui/material/Button";
 import Alert from "@mui/material/Alert";
 import "./SearchBox.css";
+
 const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 const API_URL = import.meta.env.VITE_WEATHER_API_URL;
 
