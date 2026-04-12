@@ -9,8 +9,8 @@ import BedtimeIcon from "@mui/icons-material/Bedtime";
 import CloudIcon from "@mui/icons-material/Cloud";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 
-function formatTime(unixTime, timezoneOffset = 0) {
-  const date = new Date((unixTime + timezoneOffset) * 1000); // add offset
+function formatTime(unix, tz = 0) {
+  const date = new Date((unix + tz) * 1000); 
   let hours = date.getUTCHours();
   const minutes = date.getUTCMinutes();
   const ampm = hours >= 12 ? "PM" : "AM";
@@ -38,22 +38,18 @@ export default function InfoBox({ info }) {
       <div className="cardContainer">
         <Card className="weatherCard">
           <CardContent className="cardContent">
-            <Typography component="div" className="cityName">
-              {info.city}, {info.country}
-            </Typography>
-
+            <Typography component="div" className="cityName">{info.city}, {info.country}</Typography>
             <div className="iconTemp">
               <WeatherIcon className="weatherIcon" />
               <h1>{Math.round(info.temp)}°C</h1>
             </div>
-
             <Typography className="weatherText">{info.weather}</Typography>
 
             <Typography className="detailsText">
               Min: {Math.round(info.tempMin)}°C &nbsp; | &nbsp; Max:{" "}
               {Math.round(info.tempMax)}°C
             </Typography>
-
+            
             <Typography className="detailsText">
               Feels like: {Math.round(info.feels_like)}°C &nbsp; | &nbsp;
               Humidity: {info.humidity}% &nbsp; | &nbsp; Wind: {info.wind} m/s

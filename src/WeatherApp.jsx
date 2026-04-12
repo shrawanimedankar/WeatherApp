@@ -75,17 +75,10 @@ export default function WeatherApp() {
   };
 
   return (
-    <div
-      className="WeatherApp"
-      style={{
-        backgroundImage: `url(${bgImage})`,
-        transition: "background 0.5s ease",
-      }}
-    >
+    <div className="WeatherApp" style={{ backgroundImage: `url(${bgImage})`, transition: "background 0.5s ease", }}>
       <div className="headerFull">
         <h2>Weather App</h2>
       </div>
-
       <SearchBox updateInfo={updateInfo} />
       {weatherInfo && <InfoBox info={weatherInfo} />}
     </div>

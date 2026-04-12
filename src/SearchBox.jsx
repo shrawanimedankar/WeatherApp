@@ -2,13 +2,15 @@ import { useState } from "react";
 import TextField from "@mui/material/TextField";
 import SearchIcon from "@mui/icons-material/Search";
 import Button from "@mui/material/Button";
+import Alert from "@mui/material/Alert";
 import "./SearchBox.css";
 const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 const API_URL = import.meta.env.VITE_WEATHER_API_URL;
 
 export default function SearchBox({ updateInfo }) {
   let [city, setCity] = useState("");
-  let [error, setError] = useState(false);
+  let [inputError, setInputError] = useState(false);
+  let [apiError, setApiError] = useState(false);
 
   let getWeatherInfo = async () => {
     try {
@@ -41,22 +43,29 @@ export default function SearchBox({ updateInfo }) {
 
   let handleChange = (event) => {
     setCity(event.target.value);
-    setError(false);
+    setInputError(false); 
+    setApiError(false); 
   };
 
   let handleSubmit = async (event) => {
+    event.preventDefault();
+    // input validation
+    if (!city.trim()) {
+      setInputError(true);
+      setApiError(false);
+      return;
+    }
     try {
-      event.preventDefault();
-      setError(false); //reset error first
-      // console.log(city);
+      setInputError(false);
+      setApiError(false);
+
       let newInfo = await getWeatherInfo();
       updateInfo(newInfo);
       setCity("");
     } catch (error) {
-      setError(true);
+      setApiError(true);
     }
   };
-
   return (
     <div className="SearchBox">
       <form onSubmit={handleSubmit}>
@@ -65,65 +74,54 @@ export default function SearchBox({ updateInfo }) {
           variant="outlined"
           value={city}
           onChange={handleChange}
-          required
+          error={inputError}
+          helperText={inputError ? "City name is required" : ""}
           sx={{
-            "& .MuiOutlinedInput-input": {
-              color: "#0400ff",
-              fontWeight: 900,
-              backgroundColor: "#ffffffa9",
+            "& .MuiFormHelperText-root": {
+              backgroundColor: "#ffefef",
+              color: "red",
+              padding: "2px 4px",
+              borderRadius: "4px",
+              textAlign: "center",
             },
-
+            "& .MuiOutlinedInput-input": {
+              fontWeight: 900,
+              backgroundColor: "#ffffff8a",
+            },
             "& .MuiOutlinedInput-root fieldset": {
               borderColor: "black",
               borderWidth: "3px",
             },
-
             "& .MuiOutlinedInput-root:hover fieldset": {
               borderColor: "black",
             },
-
             "& .MuiOutlinedInput-root.Mui-focused fieldset": {
-              borderColor: "black", // fixed typo
+              borderColor: "black",
             },
-
             "& label": {
               color: "black",
               fontWeight: 700,
             },
-
             "& label.Mui-focused": {
               color: "black",
             },
           }}
         />
+
         <Button
           variant="contained"
           type="submit"
           endIcon={<SearchIcon />}
-          sx={{
-            marginTop: "0.4rem",
-            backgroundColor: "#00ffd5",
-            color: "black",
-            fontWeight: 700,
-            border: "2px solid blue",
-            "&:hover": {
-              backgroundColor: "#00c6b5",
-            },
-          }}
+          color="primary"
+          sx={{ mt: 1 }}
         >
           Search
         </Button>
-        {error && (
-          <p
-            style={{
-              color: "red",
-              fontWeight: 700,
-              backgroundColor: "white",
-              marginTop: "0.4rem",
-            }}
-          >
+
+        {apiError && (
+          <Alert severity="error" sx={{ mt: 1 }}>
             We couldn't find this place
-          </p>
+          </Alert>
         )}
       </form>
     </div>
