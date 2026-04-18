@@ -31,7 +31,6 @@ export default function WeatherApp() {
         sunset: data.sys.sunset,
         timezone: data.timezone,
       };
-
       setWeatherInfo(info);
       setBackground(info); // set background based on weather
     } catch (err) {
